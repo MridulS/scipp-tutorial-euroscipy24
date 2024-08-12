@@ -1,0 +1,4 @@
+- Experience with Python.
+- Experience with numpy.
+- Experience with xarray.
+- Experience with scipp.
