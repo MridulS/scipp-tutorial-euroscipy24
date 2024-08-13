@@ -19,3 +19,15 @@ def fill_up_container(container, seeds):
     random_seeds = np.random.choice(container.size, seeds.value, replace=False)
     coordinates = np.unravel_index(random_seeds, container.shape)
     container.values[coordinates] = 1
+
+
+def scatter(x, y):
+    """
+    Simple scatter plot
+    """
+    fig, ax = plt.subplots()
+    ax.scatter(x, y, marker=".", s=1)
+    ax.set_aspect("equal")
+    ax.set_xlim(x.min(), x.max())
+    ax.set_ylim(y.min(), y.max())
+    return ax
