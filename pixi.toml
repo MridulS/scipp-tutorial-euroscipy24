@@ -14,6 +14,7 @@ download_data = { cmd = [
 	"nyc_taxi_data_2015_small.tar.gz"
 ] }
 setup_data = { cmd = "python untar.py", depends-on = ["download_data"] }
+dot_c = { cmd = "dot -c" }
 
 [dependencies]
 scipp = ">=24.8.0"
