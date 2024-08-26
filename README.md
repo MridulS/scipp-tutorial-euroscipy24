@@ -15,8 +15,8 @@ git clone https://github.com/MridulS/scipp-tutorial-euroscipy24
 cd scipp-tutorial-euroscipy24
 mamba env create -f environment.yml
 # download nyc_taxi dataset
-curl "https://public.esss.dk/groups/scipp/dmsc-summer-school/scipp/nyc_taxi_data_2015_small.tar.gz" --output nyc_taxi_data_2015_small.tar.gz
-python untar.py
+curl "https://public.esss.dk/groups/scipp/dmsc-summer-school/scipp/nyc_taxi_data_2015_small.tar.gz" --output data/nyc_taxi_data_2015_small.tar.gz
+python notebooks/utils/untar.py
 ```
 
-More in-depth tutorials are available in the [Scipp user guide](https://scipp.github.io/user-guide/index.html).
+More in-depth tutorials are available in the [scipp user guide](https://scipp.github.io/user-guide/index.html).
