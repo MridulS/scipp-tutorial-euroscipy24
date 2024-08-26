@@ -1,0 +1,1 @@
+Run `pixi run setup_data` to populate the data directory.

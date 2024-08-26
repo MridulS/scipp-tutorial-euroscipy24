@@ -11,9 +11,9 @@ download_data = { cmd = [
 	"curl",
 	"https://public.esss.dk/groups/scipp/dmsc-summer-school/scipp/nyc_taxi_data_2015_small.tar.gz",
 	"--output",
-	"nyc_taxi_data_2015_small.tar.gz"
+	"data/nyc_taxi_data_2015_small.tar.gz"
 ] }
-setup_data = { cmd = "python untar.py", depends-on = ["download_data"] }
+setup_data = { cmd = "python notebooks/utils/untar.py", depends-on = ["download_data"] }
 dot_c = { cmd = "dot -c" }
 
 [dependencies]
