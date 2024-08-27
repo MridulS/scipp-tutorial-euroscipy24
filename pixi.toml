@@ -7,12 +7,7 @@ channels = ["conda-forge", "scipp"]
 platforms = ["linux-64", "win-64", "osx-arm64", "osx-64"]
 
 [tasks]
-download_data = { cmd = [
-	"curl",
-	"https://public.esss.dk/groups/scipp/dmsc-summer-school/scipp/nyc_taxi_data_2015_small.tar.gz",
-	"--output",
-	"data/nyc_taxi_data_2015_small.tar.gz"], 
-	outputs = ["data/nyc_taxi_data_2015_small.tar.gz"] }
+download_data = { cmd = "curl -o data/nyc_taxi_data_2015_small.tar.gz https://public.esss.dk/groups/scipp/dmsc-summer-school/scipp/nyc_taxi_data_2015_small.tar.gz", outputs = ["data/nyc_taxi_data_2015_small.tar.gz"] }
 setup_data = { cmd = "python notebooks/utils/untar.py", depends-on = ["download_data"] }
 dot_c = { cmd = "dot -c" }
 
